@@ -1,0 +1,23 @@
+div {
+    display: grid;
+    align-items: center;
+    grid-template-columns:  repeat(6, 55px [col-start]) 10px [col-start] ;
+    grid-template-rows: repeat(2, 50px [row-start]);;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 5px
+}
+p{
+    justify-content: right;
+}
+p.name {
+    grid-column-start: 3;
+    grid-column-end: 56;
+    grid-row: 1;
+}
+p.gender {
+
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row: 2;
+}

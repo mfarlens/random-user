@@ -1,0 +1,5 @@
+<div class="userList" *ngIf="users">
+    <div *ngFor="let user of users">
+        <user-detail [user]="user"></user-detail>
+    </div>
+</div>
