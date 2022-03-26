@@ -1,0 +1,6 @@
+
+div {
+    background-color: black;
+    display: grid;
+    justify-content: center;
+}

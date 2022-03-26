@@ -1,0 +1,11 @@
+<div class="users">
+    <div class="filter">
+        <user-filter (filtersEvent)="setFilters($event)"></user-filter>
+    </div>
+    <div *ngIf="users" class="user">
+        <div *ngFor="let user of usersToShow | nameFilter : nameFilter">
+            <user-detail [user]="user" (favoriteEvent)="setFavorite($event)"></user-detail>
+        </div>
+        <button (click)="getUsers()">More Users</button>
+    </div>
+</div>

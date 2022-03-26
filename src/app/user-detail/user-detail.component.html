@@ -1,4 +1,7 @@
 <div class="userDetail">
-    <p class="name"><span>Name: </span>{{user.firstName}} {{user.lastName}}</p>
+    <div class="userPhoto"><img src="{{user.thumbnail}}" alt="{{user.firstName}} {{user.lastName}} photo" ></div>
+    <p class="name"><span>Name: </span>{{user.firstName}} {{user?.lastName}}</p>
     <p class="gender"><span>Gender: </span>{{user.gender}}</p>
+    <p class="favorite" (click)="setFavorite(user)"><span *ngIf="user.favorite">&starf;</span><span *ngIf="!user.favorite">&star;</span></p>
 </div>
+ 

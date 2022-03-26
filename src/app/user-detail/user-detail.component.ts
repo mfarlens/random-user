@@ -1,21 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { UserModel } from "../model/UserModel";
 
 @Component({
   selector: 'user-detail',
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.css']
 })
-export class UserDetailComponent implements OnInit {
+export class UserDetailComponent {
 
-  @Input() user = {
-          firstName:'',
-          lastName: '',
-          gender: ''
-        };
+  @Input() user: UserModel = {
+    firstName: '',
+    lastName: '',
+    gender: '',
+    thumbnail: '',
+    photo: '',
+    favorite: false
+  };
 
-  constructor() { }
+  @Output() favoriteEvent = new EventEmitter<UserModel>();
 
-  ngOnInit(): void {
+  constructor() {}
+
+  setFavorite(user: UserModel){
+    this.favoriteEvent.emit(user);
   }
-
 }
+

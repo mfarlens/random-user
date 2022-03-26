@@ -1,0 +1,12 @@
+div{
+    margin: 5px;
+}
+p {
+    margin: 2px;
+}
+input[type=text] {
+    width: 120px;
+}
+label{
+    margin: 2px;
+}
