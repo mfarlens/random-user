@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UsersComponent } from './users/users.component';
 import { UserFilterComponent } from './user-filter/user-filter.component';
-import { ShowUserPhotoDialog } from './show-user-photo-dialog/show-user-photo-dialog.component';
 import { NameFilterPipe } from './name-filter.pipe';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { NameFilterPipe } from './name-filter.pipe';
     UserDetailComponent,
     UsersComponent,
     UserFilterComponent,
-    ShowUserPhotoDialog,
     NameFilterPipe
   ],
   imports: [

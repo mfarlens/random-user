@@ -11,7 +11,7 @@ export class UserModel {
         this.lastName = response.name.last;
         this.gender = response.gender;
         this.thumbnail = response.picture.thumbnail;
-        this.photo = response.picture.medium;
+        this.photo = response.picture.large;
     }
 
 }
