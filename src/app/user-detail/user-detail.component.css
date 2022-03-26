@@ -23,6 +23,7 @@ p {
     grid-column-start: 3;
     grid-column-end: 6;
     grid-row: 1;
+    width: inherit;
 }
 .gender {
 
@@ -31,7 +32,7 @@ p {
     grid-row: 2;
 }
 .favorite {
-    color:yellow;
+    color:orange;
     margin-right: 5px;
     grid-column-start: 7;
     grid-row: 1;
@@ -43,4 +44,23 @@ p {
 }
 .favorited:after {
     content: "\2605";
+}
+
+.modal {
+    display: flex;
+    width: 330px;
+    height: 300px;
+    position: inherit;
+    overflow: hidden;
+}
+.modal img {
+    grid-column-start: 1;
+    padding:10px;
+    margin: 20px 0 20px 20px;
+    border: 2px solid black;
+}
+.modal p {
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
 }

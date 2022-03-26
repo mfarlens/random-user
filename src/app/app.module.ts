@@ -8,6 +8,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UsersComponent } from './users/users.component';
 import { UserFilterComponent } from './user-filter/user-filter.component';
 import { NameFilterPipe } from './name-filter.pipe';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NameFilterPipe } from './name-filter.pipe';
     UserDetailComponent,
     UsersComponent,
     UserFilterComponent,
-    NameFilterPipe
+    NameFilterPipe,
+    ModalComponent
   ],
   imports: [
     BrowserModule,    

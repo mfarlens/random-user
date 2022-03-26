@@ -1,7 +1,16 @@
 <div class="userDetail">
-    <div class="userPhoto"><img src="{{user.thumbnail}}" alt="{{user.firstName}} {{user.lastName}} photo" ></div>
+    <div class="userPhoto"><img src="{{user.thumbnail}}" alt="{{user.firstName}} {{user.lastName}} photo"
+            (click)="openModal('photoModal-'+user.firstName+'-'+user.lastName)"></div>
     <p class="name"><span>Name: </span>{{user.firstName}} {{user?.lastName}}</p>
     <p class="gender"><span>Gender: </span>{{user.gender}}</p>
-    <p class="favorite" (click)="setFavorite(user)"><span *ngIf="user.favorite">&starf;</span><span *ngIf="!user.favorite">&star;</span></p>
+    <p class="favorite" (click)="setFavorite(user)"><span *ngIf="user.favorite">&starf;</span><span
+            *ngIf="!user.favorite">&star;</span></p>
 </div>
- 
+
+<modal [id]="'photoModal-' + user.firstName + '-' + user.lastName">
+    <div class="modal">
+        <img class="userPhoto-Modal" src="{{user.photo}}" alt="{{user.firstName}} {{user.lastName}} photo">
+        <p class="favorite" (click)="setFavorite(user)"><span *ngIf="user.favorite">&starf;</span>
+            <span *ngIf="!user.favorite">&star;</span></p>
+    </div>
+</modal>
