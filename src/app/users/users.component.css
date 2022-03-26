@@ -7,13 +7,15 @@ div{
     grid-template-columns: 175px [col-start] 500px [col-start] ;
 }
 div.filter{
+    display: grid;
     grid-column-start: 1;
-    position: fixed;
     margin-bottom: 700px;
-    height: 150px;
     border: 2px solid white;
     width: 150px;
     border-radius: 5px;
+    position: fixed;
+    top: 100px;
+    align-items: center;
 }
 div.user {
     grid-column-start: 2;
@@ -24,6 +26,6 @@ button {
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin: 20px;
     border-radius: 5px;
 }

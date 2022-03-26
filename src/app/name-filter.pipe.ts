@@ -7,7 +7,10 @@ import { UserModel } from './model/UserModel';
 export class NameFilterPipe implements PipeTransform {
 
   transform(users: UserModel[], name: string) {
-    return users.filter( el => (el.firstName + ' ' + el.lastName).toLocaleLowerCase().includes(name.toLocaleLowerCase()));
+    if(name !== ''){
+      return users.filter( el => (el.firstName + ' ' + el.lastName).toLocaleLowerCase().includes(name.toLocaleLowerCase()));
+    }
+    return users;
   }
 
 }
