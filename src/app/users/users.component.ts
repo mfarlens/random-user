@@ -36,11 +36,20 @@ export class UsersComponent implements OnInit {
 
   setFavorite(user: UserModel) {
     const index = this.users.findIndex(aux => aux.firstName === user.firstName && aux.lastName === user.lastName);
-    const favorite = this.users.splice(index, 1)[0]
-    favorite.favorite = true;
-    this.users.splice(0, 0, favorite);
-    let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-    favorites.push(favorite);
+    this.users.splice(index, 1)[0]
+    let position: number; 
+
+    if(user.favorite){
+      position = this.users.map(val => val.favorite).lastIndexOf(true) + 1; //finding the position of the first non favorite
+    } else {
+      position = 0;
+    }
+
+    user.favorite = !user.favorite;
+    this.users.splice(position, 0, user);
+
+    const favorites = this.users.slice(0, position);
+    console.log(favorites);
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }
 
